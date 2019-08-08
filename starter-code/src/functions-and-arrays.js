@@ -1,6 +1,13 @@
-// Find the maximum
+// Find the maximum 
+function maxOfTwoNumbers(x, y){
+  var a = Math.max(x, y);
+  return a;
+}
+
+//console.log(maxOfTwoNumbers(48, 97)); /*commented out after reallife test*/
 
 // Finding Longest Word
+
 var words = [
   'mystery',
   'brother',
@@ -8,16 +15,51 @@ var words = [
   'crocodile',
   'pearl',
   'orchard',
-  'crackpot'
+  'crackpot',
+  'dragondagonsagon'
 ];
 
-// Calculating a Sum
+
+function findLongestWord(words){
+ //debugger
+ var longestWord = ""
+  for (let i = 0; i < words.length; i++) {
+    if (longestWord.length < words[i].length) {
+      longestWord = words[i];
+    }
+  }
+  return longestWord;
+}
+console.log(findLongestWord(words))
+  
+
+// Calculating a Sum (with a loop)
 
 var numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+
+function sumArray(numbers){
+  for (var i = 0, sum= 0; i 
+    < numbers.length; sum += numbers[i++]);
+    console.log(sum);
+}
+
+console.log(" this is the total sum of an array") + sumArray(numbers)
 
 // Calculate the Average
 
 var numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+
+
+function sumAvg(numbersAvg){
+  for (var i = 0, sum= 0; i 
+    < numbersAvg.length; sum += numbersAvg[i++]);
+    console.log(sum/[''].length);
+}
+
+console.log("This the avarage of an array") + sumAvg(numbersAvg)
+
+//
+
 
 // Array of Strings
 var wordsArr = [
@@ -33,6 +75,14 @@ var wordsArr = [
   'palace'
 ];
 
+function avarageWordLength(wordsArr){
+  for (var i = 0, sum= 0; i 
+    < wordsArr.length; sum += wordsArr[i++]);
+    console.log(sum/[''].length);
+}
+
+avarageWordLength(wordsArr)
+
 // Unique Arrays
 var wordsUnique = [
   'crab',
@@ -47,6 +97,14 @@ var wordsUnique = [
   'simple',
   'bring'
 ];
+  
+//function uniquifyArray(collection:[]){
+//return [...new Set(collection)];
+//}
+
+
+/*
+
 
 // Finding Elements
 var wordsFind = [
@@ -74,6 +132,8 @@ var wordsCount = [
   'disobedience',
   'matter'
 ];
+
+
 // Bonus Quest
 
 var matrix = [
@@ -98,3 +158,26 @@ var matrix = [
   [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
+
+
+        var z =3
+    function count(arr) {
+        let rowProd = 0;
+        let colProd = 0;
+       for ( let i = 0; i < arr.length; i++){
+       for(let j = 0; j < arr[i].length - 3; j++) {
+
+          let prodRowTemp = arr[i][j] * arr[i][j + 1] * arr[i][j +2] * arr[i][j + 3];
+          let prodColumnTemp = arr[i][j] * arr[i][j + 1] * arr[i][j +2] * arr[i][j + 3];
+
+          rowProd = rowProd < prod ? prod : rowProd;
+          colProd = prodColumnTemp < prod ? prod : prodColumnTemp;
+
+
+      }
+  }
+
+  return rowProd < colProd ? colProd :
+
+}
+*/
